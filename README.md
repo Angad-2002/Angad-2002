@@ -1,4 +1,4 @@
-Hi fellow Earthlings 👋 /
+Hi fellow Earthlings 👋 <br />
 This is Angad Singh /
 🌱A novice AI & ML enthusiast.
 🌱 I’m currently learning Web Development.
