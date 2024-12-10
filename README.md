@@ -1,11 +1,12 @@
-<h1 align="center"><a href="https://git.io/typing-svg">
-     <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&center=true&vCenter=true&width=500&lines=Hi+Fellow+Earthlings+%F0%9F%91%8B;This+is+Angad+Singh;AI%2FML+%26+Blockchain+Revolutionary;Disrupting+the+future+with+data+and+code;Building+the+next-gen+smart+contracts+and+AI+systems" alt="Typing SVG"/>
+<div align="center">
+  <!-- Typing SVG by DenverCoder1 -->
+  <a href="https://github.com/DenverCoder1/readme-typing-svg">
+    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&pause=1000&center=true&vCenter=true&width=550&lines=Hi+Fellow+Earthlings+%F0%9F%91%8B;This+is+Angad+Singh;AI%2FML+%26+Blockchain+Explorer;Building+the+future+with+data%2C+code%2C+and+blocks;Where+algorithms+and+smart+contracts+collide" alt="Typing SVG"/>
   </a>
-  </a></h2>
+</div>
+
 <h2 align="center">
   <img src="https://komarev.com/ghpvc/?username=ParthJohri&color=dc143c&style=for-the-badge" alt="Profile Views" style="height:21px;">
-Fullstack Developer
 <a href="https://parth-johri.vercel.app/">
     <img src="https://img.shields.io/badge/Portfolio-543DE0?style=for-the-badge&logo=About.me&logoColor=white" alt="Portfolio" style="height:22px;">
 </a>
