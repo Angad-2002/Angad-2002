@@ -8,7 +8,7 @@
   <a href="https://x.com/09Angadsingh"><img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="X Badge"/></a>
   <a href="https://leetcode.com/u/Angad_2002/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" alt="LeetCode Badge"/></a>
   <a href="https://www.codechef.com/users/angad_11092002"><img src="https://img.shields.io/badge/CodeChef-%23964B00.svg?style=for-the-badge&logo=CodeChef&logoColor=white" alt="CodeChef Badge"/></a>
-  <a href="https://codeforces.com/profile/angad_2002"><img src="https://img.shields.io/badge/CodeChef-%23964B00.svg?style=for-the-badge&logo=CodeChef&logoColor=white" alt="CodeForces Badge"/></a>
+  <a href="https://codeforces.com/profile/angad_2002"><img src="https://img.shields.io/badge/Codeforces-445f9d?style=for-the-badge&logo=Codeforces&logoColor=white" alt="CodeForces Badge"/></a>
 </div>
 <div align="center">
   <img src="https://komarev.com/ghpvc/?username=Angad-2002&style=flat-square&color=blue" alt="Profile Count"/>
