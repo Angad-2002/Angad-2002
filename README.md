@@ -1,8 +1,6 @@
 <h2 align="center">
+  
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&center=true&vCenter=true&width=650&lines=Hi,+Fellow+Earthlings+%F0%9F%91%8B;This+is+Angad+Singh;AI%2FML+%26+Blockchain+Explorer;Coding+the+future,+one+block+at+a+time;Where+data+drives+innovation" alt="Typing SVG"/>
-</h2>
-
-<h2 align="center">
   <img src="https://komarev.com/ghpvc/?username=Angad-2002&color=dc143c&style=for-the-badge" alt="Profile Views" style="height:21px;">
 
 </h2>
@@ -13,7 +11,7 @@
 
 ## <img align ='center' src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjh2dDM4bDhyYzM5NmppaHJ6dG56Mmh3bTkyanFkdWRvZ3R1cGoycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9ZQ/LOnt6uqjD9OexmQJRB/giphy.gif" width="37" /> About Me
 
-I am a passionate Fullstack Developer with a strong foundation in both frontend and backend technologies. A Versatile Developer Specializing in <strong>MERN, Android Development, and Chatbot Development</strong> with a Passion for Continuous Learning. My expertise lies in integration, improving user interfaces, and enhancing overall user experiences. I thrive on solving challenging problems and creating innovative solutions.
+I’m an AI/ML and Web3 enthusiast passionate about solving complex problems and building innovative solutions. A Versatile Developer Specializing in <strong>Backend, AI & ML, and Web3 Development</strong> with a passion for Continuous Learning. I enjoy exploring new technologies and creating user-focused, impactful applications.
 
 <details>
  <summary><h2> <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/about.png" width="37" /> Resume</h2></summary>
