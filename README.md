@@ -1,7 +1,6 @@
-<div align="center">
-  <!-- Typing SVG by DenverCoder1 -->
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&center=true&vCenter=true&width=650&lines=Hi+Fellow+Earthlings+%F0%9F%91%8B;This+is+Angad+Singh;AI%2FML+%26+Blockchain+Explorer;Building+the+future+with+data%2C+code%2C+and+blocks;Where+algorithms+and+smart+contracts+collide" alt="Typing SVG"/>
-</div>
+<h2 align="center">
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&center=true&vCenter=true&width=650&lines=Hi+Fellow+Earthlings+%F0%9F%91%8B;This+is+Angad+Singh;AI%2FML+%26+Blockchain+Explorer;Coding+the+future+one+block+at+a+time;Where+data+drives+innovation" alt="Typing SVG"/>
+</h2>
 
 <h2 align="center">
   <img src="https://komarev.com/ghpvc/?username=ParthJohri&color=dc143c&style=for-the-badge" alt="Profile Views" style="height:21px;">
