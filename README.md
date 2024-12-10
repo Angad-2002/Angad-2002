@@ -20,12 +20,12 @@ I’m an AI/ML and Web3 enthusiast passionate about solving complex problems and
  <details>
   <summary><h4> <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/academics.gif"  width="29"/> Academics</h2></summary>
 
-  <span><img src="https://img.shields.io/badge/BTECH-DTU_ECE'24-1877F2?style=for-the-badge"></span>
-  <span><img src="https://img.shields.io/badge/GPA-9.45/10.0-EFEEE9?style=for-the-badge"></span>
+  <span><img src="https://img.shields.io/badge/BTECH-VIT_CSE'25-1877F2?style=for-the-badge"></span>
+  <span><img src="https://img.shields.io/badge/CGPA (UPTO 6'TH SEMESTER)-8.79/10.0-EFEEE9?style=for-the-badge"></span>
   
 </details>
  <details>
-  <summary><h4> <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/experience.gif"  width="29"/> Experience</h2></summary>
+  <summary><h4> <img align="center" src="[https://github.com/ParthJohri/ParthJohri/blob/readME/icons/experience.gif](https://github.com/ParthJohri/ParthJohri/blob/readME/icons/experience.gif)"  width="29"/> Experience</h2></summary>
 
 - **Frontend Developer Intern** at Magpie XYZ (Remote) | Jan 2024 - May 2024
   - Integrated Cakepie, Magpie, Eigenpie pages, facilitating deposits exceeding $800 million.
@@ -171,15 +171,13 @@ I’m an AI/ML and Web3 enthusiast passionate about solving complex problems and
   <summary><h2> <img align ='center' src='https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGtqdDdwN2oyNWJ4czlncHBkamJxaHcxYmVmcXY3a3I3MjRmYjBrbCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9ZQ/kmUvauX8TMWg0OsqKW/giphy.gif' width ='37' /> Socials</h2></summary>
 
 <div style="display: flex; flex-direction: column; justify-content: center; align-items: center; ">
-  <a href="https://github.com/ParthJohri">
-    <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/Github.gif" width="70"/>
-  </a>
-  <a href="https://linkedin.com/in/parthjohri07">
-    <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/Linkedin.gif" width="70"/>
-  </a>
-  <a href="https://www.quora.com/profile/Parth-Johri-6">
-    <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/Quora.gif" width="70"/>
-  </a>
+  <a href="https://www.linkedin.com/in/angad2002/"><img src="https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/></a>
+  <a href="https://www.instagram.com/angadsingh_2002/"><img src="https://img.shields.io/badge/Instagram-%23E4405F.svg?style=for-the-badge&logo=Instagram&logoColor=white" alt="Instagram Badge"/></a>
+  <a href="https://www.reddit.com/user/Embarrassed-Ratio917/"><img src="https://img.shields.io/badge/Reddit-%23FF4500.svg?style=for-the-badge&logo=Reddit&logoColor=white" alt="Reddit Badge"/></a>
+  <a href="https://x.com/09Angadsingh"><img src="https://img.shields.io/badge/X-%23000000.svg?style=for-the-badge&logo=X&logoColor=white" alt="X Badge"/></a>
+  <a href="https://leetcode.com/u/Angad_2002/"><img src="https://img.shields.io/badge/LeetCode-000000?style=for-the-badge&logo=LeetCode&logoColor=#d16c06" alt="LeetCode Badge"/></a>
+  <a href="https://www.codechef.com/users/angad_11092002"><img src="https://img.shields.io/badge/CodeChef-%23964B00.svg?style=for-the-badge&logo=CodeChef&logoColor=white" alt="CodeChef Badge"/></a>
+  <a href="https://codeforces.com/profile/angad_2002"><img src="https://img.shields.io/badge/Codeforces-445f9d?style=for-the-badge&logo=Codeforces&logoColor=white" alt="CodeForces Badge"/></a>
 </div>
 
   
