@@ -160,7 +160,7 @@ I’m an AI/ML and Web3 enthusiast passionate about solving complex problems and
   <div align="center">
 
    ![](https://github-readme-stats.vercel.app/api?username=Angad-2002&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=false)<br/>
-   ![](https://github-readme-streak-stats.herokuapp.com/?username=Angad-2002&theme=tokyonight&hide_border=false)<br/>
+   ![](https://github-readme-streak-stats.herokuapp.com/?user=Angad-2002&theme=tokyonight&hide_border=false)<br/>
    ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Angad-2002&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=false&layout=compact)<br/>
    ![](https://github-readme-activity-graph.vercel.app/graph?username=Angad-2002&theme=tokyo-night)
 
