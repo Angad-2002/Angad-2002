@@ -1,8 +1,6 @@
 <div align="center">
   <!-- Typing SVG by DenverCoder1 -->
-  <a href="https://github.com/DenverCoder1/readme-typing-svg">
-    <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=30&pause=1000&center=true&vCenter=true&width=550&lines=Hi+Fellow+Earthlings+%F0%9F%91%8B;This+is+Angad+Singh;AI%2FML+%26+Blockchain+Explorer;Building+the+future+with+data%2C+code%2C+and+blocks;Where+algorithms+and+smart+contracts+collide" alt="Typing SVG"/>
-  </a>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&center=true&vCenter=true&width=650&lines=Hi+Fellow+Earthlings+%F0%9F%91%8B;This+is+Angad+Singh;AI%2FML+%26+Blockchain+Explorer;Building+the+future+with+data%2C+code%2C+and+blocks;Where+algorithms+and+smart+contracts+collide" alt="Typing SVG"/>
 </div>
 
 <h2 align="center">
