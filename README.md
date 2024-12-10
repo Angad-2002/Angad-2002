@@ -1,8 +1,9 @@
 <h2 align="center">
-  
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&center=true&vCenter=true&width=650&lines=Hi,+Fellow+Earthlings+%F0%9F%91%8B;This+is+Angad+Singh;AI%2FML+%26+Blockchain+Explorer;Coding+the+future,+one+block+at+a+time;Where+data+drives+innovation" alt="Typing SVG"/>
-  <img src="https://komarev.com/ghpvc/?username=Angad-2002&color=dc143c&style=for-the-badge" alt="Profile Views" style="height:21px;">
+</h2>
 
+<h2 align="center">
+  <img src="https://komarev.com/ghpvc/?username=Angad-2002&color=dc143c&style=for-the-badge" alt="Profile Views" style="height:21px;">
 </h2>
 
 <div align="center">
