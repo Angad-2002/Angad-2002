@@ -144,7 +144,7 @@ I’m an AI/ML and Web3 enthusiast passionate about solving complex problems and
   ### Leetcode
   <div align="center">
   <a href="https://leetcode.com/u/Angad_2002/">
-  <img height="316" src="https://leetcard.jacoblin.cool/Angad_2002?theme=dark&font=Ubuntu&cache=14400&ext=contest&sheets=https://gist.githubusercontent.com/binarysolver/5e715e284c89cace8f5fa09f7fb930b8/raw/ec0be570f114124b1a2156a660d67baa0ab5639d/leetcode_stats_card.css" alt="Angad_2002 Leetcode Stats"/>
+  <img height="316" src="https://leetcard.jacoblin.cool/Angad_2002?theme=dark&font=Ubuntu&cache=14400&ext=contest&sheets=https://gist.githubusercontent.com/binarysolver/5e715e284c89cace8f5fa09f7fb930b8/raw/ec0be570f114124b1a2156a660d67baa0ab5639d/leetcode_stats_card.css" alt="Angad Singh Leetcode Stats"/>
   </a>
  </div>
 
@@ -152,17 +152,17 @@ I’m an AI/ML and Web3 enthusiast passionate about solving complex problems and
   ### Codeforces
   <div align="center">
     <a href="https://codeforces.com/profile/angad_2002">
-      <img height="316" src="https://codeforces-readme-stats.vercel.app/api/card?username=binarysolver&theme=github_dark&force_username=true&border_color=404040" alt="Angad_2002 Codeforces Stats"/>
+      <img height="316" src="https://codeforces-readme-stats.vercel.app/api/card?username=angad_2002&theme=github_dark&force_username=true&border_color=404040" alt="Angad Singh Codeforces Stats"/>
     </a>
   </div>
   
   ### GitHub
   <div align="center">
 
-   ![](https://github-readme-stats.vercel.app/api?username=Angad_2002&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=false)<br/>
-   ![](https://github-readme-streak-stats.herokuapp.com/?user=Angad_2002&theme=tokyonight&hide_border=false)<br/>
-   ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Angad_2002&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=false&layout=compact)<br/>
-   ![](https://github-readme-activity-graph.vercel.app/graph?username=Angad_2002&theme=tokyo-night)
+   ![](https://github-readme-stats.vercel.app/api?username=Angad-2002&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=false)<br/>
+   ![](https://github-readme-streak-stats.herokuapp.com/?user=Angad-2002&theme=tokyonight&hide_border=false)<br/>
+   ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Angad-2002&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=false&layout=compact)<br/>
+   ![](https://github-readme-activity-graph.vercel.app/graph?username=Angad-2002&theme=tokyo-night)
 
   </div>
 </details>
