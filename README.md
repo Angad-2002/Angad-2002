@@ -155,6 +155,13 @@ I’m an AI/ML and Web3 enthusiast passionate about solving complex problems and
       <img height="316" src="https://codeforces-readme-stats.vercel.app/api/card?username=angad_2002&theme=github_dark&force_username=true&border_color=404040" alt="Angad Singh Codeforces Stats"/>
     </a>
   </div>
+
+  ### CodeChef
+  <div align="center">
+    <a href="https://www.codechef.com/users/angad_11092002">
+      <img height="316" src="https://codechef-readme-stats.onrender.com/angad_11092002?v=1" alt="Angad Singh CodeChef Stats"/>
+    </a>
+  </div>
   
   ### GitHub
   <div align="center">
@@ -187,7 +194,7 @@ I’m an AI/ML and Web3 enthusiast passionate about solving complex problems and
 
 <p> 
  <i>You can reach out to me via</i> 
-&nbsp;<a href="mailto:contact.parthjohri@gmail.com">
+&nbsp;<a href="mailto:angadsinghriar.11092002@gmail.com">
      <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/Gmail.gif"  width="100"/>
  </a>
 </p>
