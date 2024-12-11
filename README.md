@@ -111,13 +111,13 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
   - Designed a user-friendly interface using HTML3, CSS, JavaScript, and Bootstrap, and optimized backend systems using Flask and MySQL. Streamlined ETL processes and improved data processing efficiency by 30%. 
   - **Impact:** Achieved 85%+ disease detection accuracy, increased user engagement by 20% through a seamless interface, and enhanced platform versatility for real-world healthcare applications.
 
-  #### <a href="https://github.com/Angad-2002/SortingHat">Sorting Hat</a>
+  #### <a href="https://github.com/Angad-2002/Sorting_Hat_ML">Sorting Hat</a>
   <span><img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"> <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"></span>  
   - Built a machine learning model using a Gaussian Classifier to classify individuals into houses from the Harry Potter Universe based on the Big Five Personality Score.  
   - Achieved an **81.34% model accuracy**, showcasing the effectiveness of personality-based predictive analysis.  
   - **Impact:** Engaged users with an interactive personality classification system while demonstrating real-world ML applications in entertainment.  
 
-  #### <a href="https://github.com/Angad-2002/GenomeClassifier">Genome Classifier</a>
+  #### <a href="https://github.com/Angad-2002/Gene_ML">Genome Classifier</a>
   <span><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"></span>  
   - Developed a genome sequence classification model using **Multinomial Naive Bayes** and NLP to classify genomes into classes like chimpanzees, humans, and dogs.  
   - **Impact:** Delivered a highly accurate solution with classification rates of **99.8% for chimpanzees**, **98.6% for humans**, and **92% for dogs**, emphasizing its capability for genetic research and analysis.  
