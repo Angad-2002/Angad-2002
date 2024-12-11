@@ -12,7 +12,7 @@
 
 ## <img align ='center' src="https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExdjh2dDM4bDhyYzM5NmppaHJ6dG56Mmh3bTkyanFkdWRvZ3R1cGoycSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9ZQ/LOnt6uqjD9OexmQJRB/giphy.gif" width="37" /> About Me
 
-I’m an AI/ML and Web3 enthusiast passionate about solving complex problems and building innovative solutions. A Versatile Developer Specializing in <strong>Backend, AI & ML, and Web3 Development</strong> with a passion for Continuous Learning. I enjoy exploring new technologies and creating user-focused, impactful applications.
+I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving complex problems and building innovative solutions. A Versatile Developer Specializing in <strong>Backend, AI & ML, and Web3 Development</strong> with a passion for Continuous Learning. I enjoy exploring new technologies and creating user-focused, impactful applications.
 
 <details>
  <summary><h2> <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/about.png" width="37" /> Resume</h2></summary>
@@ -27,17 +27,11 @@ I’m an AI/ML and Web3 enthusiast passionate about solving complex problems and
  <details>
   <summary><h4> <img align="center" src="[https://github.com/ParthJohri/ParthJohri/blob/readME/icons/experience.gif](https://github.com/ParthJohri/ParthJohri/blob/readME/icons/experience.gif)"  width="29"/> Experience</h2></summary>
 
-- **Frontend Developer Intern** at Magpie XYZ (Remote) | Jan 2024 - May 2024
-  - Integrated Cakepie, Magpie, Eigenpie pages, facilitating deposits exceeding $800 million.
-  - Enhanced data accuracy by 30% through seamless integration of smart contracts into the front-end.
-  - Improved UI loading speed and mobile responsiveness, reducing user-reported bugs by 20%.
+- **AI/ML Intern** at SmartInternz (Remote) | Aug 2023 – Nov 2023  
+  - Innovated a healthcare data analytics platform by integrating data sources, optimizing backend workflows, and implementing efficient ML algorithms.
+  - Improved data processing efficiency by <strong>30%</strong> and improved disease detection accuracy to <strong>85%+</strong> by <strong>streamlining ETL processes</strong> and <strong>optimizing SQL queries.</strong>  
+  - Collaborated with front-end developers to design a user-friendly interface using JavaScript, integrating custom DL models for disease detection, resulting in a <strong>20%</strong> increase in user engagement and enhanced platform versatility, employing <strong>Agile methodology.</strong>  
 
-- **Content Strategist - MERN Stack Intern** at TestBook (Remote) | Oct 2022 - Nov 2022
-  - Enhanced interactive coursework modules for data structures and web development, increasing student engagement by 30%.
-  - Mentored over 100 students in DSA & Web Development, significantly improving their technical proficiency.
-
-- **Content Writer Intern** at Toppr Learning Inc (Remote) | Jul 2021 - Oct 2021
-  - Transformed JEE Mathematics learning for over 10 batches by designing innovative visual-based presentations and solutions.
 </details>
   
 <details>
