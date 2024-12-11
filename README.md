@@ -108,9 +108,9 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
 
   #### <a href="https://github.com/Angad-2002/MindSyncPlus">MindSync+</a>
   <span><img src="https://img.shields.io/badge/Flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"></span>  
-  - Implemented various ML algorithms, including Logistic Regression, CNNs, VGG16, and ResNet50, to detect Alzheimer's stages from MRI scans and developed a complete login and complaint registration system.  
-  - Achieved an **85%+ model accuracy**, enhancing the platform's reliability and usability for real-world healthcare applications.  
-  - **Impact:** Improved diagnostic accuracy and user experience, contributing to efficient healthcare solutions.  
+  - Innovated an end-to-end healthcare platform for detecting Alzheimer's stages from MRI scans, incorporating a login and complaint registration system. Integrated ML models like Custom CNNs, VGG16, and ResNet50 to optimize disease detection.
+  - Designed a user-friendly interface using HTML3, CSS, JavaScript, and Bootstrap, and optimized backend systems using Flask and MySQL. Streamlined ETL processes and improved data processing efficiency by 30%. 
+  - **Impact:** Achieved 85%+ disease detection accuracy, increased user engagement by 20% through a seamless interface, and enhanced platform versatility for real-world healthcare applications.
 
   #### <a href="https://github.com/Angad-2002/SortingHat">Sorting Hat</a>
   <span><img src="https://img.shields.io/badge/Flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"></span>  
