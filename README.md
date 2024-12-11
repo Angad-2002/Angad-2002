@@ -156,7 +156,7 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
   <div align="center">
 
    ![](https://github-readme-stats.vercel.app/api?username=Angad-2002&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=false)<br/>
-   ![Streak Stats](https://github-readme-streak-stats.herokuapp.com/?user=Angad-2002&theme=tokyonight&hide_border=false)
+   ![](https://github-readme-streak-stats.herokuapp.com/?user=Angad-2002&theme=tokyonight&hide_border=false)<br/>
    ![](https://github-readme-stats.vercel.app/api/top-langs/?username=Angad-2002&theme=tokyonight&hide_border=false&include_all_commits=true&count_private=false&layout=compact&card_width=450)<br/>
    ![](https://github-readme-activity-graph.vercel.app/graph?username=Angad-2002&theme=tokyo-night)
 
