@@ -67,7 +67,6 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
   ![jQuery](https://img.shields.io/badge/jquery-%230769AD.svg?style=for-the-badge&logo=jquery&logoColor=white) 
   ![Express.js](https://img.shields.io/badge/threejs-black?style=for-the-badge&logo=three.js&logoColor=white) 
   ![MySQL](https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white) 
-  ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white) 
   ![NPM](https://img.shields.io/badge/NPM-%23CB3837.svg?style=for-the-badge&logo=npm&logoColor=white)
   ![Node-RED](https://img.shields.io/badge/Node--RED-%238F0000.svg?style=for-the-badge&logo=node-red&logoColor=white)
   ![Web3.js](https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white)
@@ -107,19 +106,33 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
   <summary><h4> <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/projects.gif"  width="29"/> Projects</h2></summary>
 
   #### <a href="https://github.com/Angad-2002/MindSyncPlus">MindSync+</a>
-  <span><img src="https://img.shields.io/badge/Flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"></span>  
+  <span>
+  <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+  <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"> 
+  <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
+  </span>  
   - Innovated an end-to-end healthcare platform for detecting Alzheimer's stages from MRI scans, incorporating a login and complaint registration system. Integrated ML models like Custom CNNs, VGG16, and ResNet50 to optimize disease detection.
   - Designed a user-friendly interface using HTML3, CSS, JavaScript, and Bootstrap, and optimized backend systems using Flask and MySQL. Streamlined ETL processes and improved data processing efficiency by 30%. 
   - **Impact:** Achieved 85%+ disease detection accuracy, increased user engagement by 20% through a seamless interface, and enhanced platform versatility for real-world healthcare applications.
 
   #### <a href="https://github.com/Angad-2002/SortingHat">Sorting Hat</a>
-  <span><img src="https://img.shields.io/badge/Flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"></span>  
+  <span>
+  <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white">
+  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E">
+  <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"> 
+  <img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white">
+  <img src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white">
+  </span>  
   - Built a machine learning model using a Gaussian Classifier to classify individuals into houses from the Harry Potter Universe based on the Big Five Personality Score.  
   - Achieved an **81.34% model accuracy**, showcasing the effectiveness of personality-based predictive analysis.  
   - **Impact:** Engaged users with an interactive personality classification system while demonstrating real-world ML applications in entertainment.  
 
   #### <a href="https://github.com/Angad-2002/GenomeClassifier">Genome Classifier</a>
-  <span><img src="https://img.shields.io/badge/Python-%230776AB.svg?style=for-the-badge&logo=python&logoColor=white"> <img src="https://img.shields.io/badge/Gradio-%23FF3860.svg?style=for-the-badge&logo=gradio&logoColor=white"></span>  
+  <span><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"></span>  
   - Developed a genome sequence classification model using **Multinomial Naive Bayes** and NLP to classify genomes into classes like chimpanzees, humans, and dogs.  
   - **Impact:** Delivered a highly accurate solution with classification rates of **99.8% for chimpanzees**, **98.6% for humans**, and **92% for dogs**, emphasizing its capability for genetic research and analysis.  
 
