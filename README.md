@@ -200,11 +200,6 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
 ### <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/activity.gif"  width="25"/> Recent Activity
 
 <!--START_SECTION:activity-->
-1. ❌ Closed PR [#1](https://github.com/ParthJohri/ParthJohri/pull/1) in [ParthJohri/ParthJohri](https://github.com/ParthJohri/ParthJohri)
-2. 🗣 Commented on [#1](https://github.com/ParthJohri/ParthJohri/pull/1#issuecomment-2267439196) in [ParthJohri/ParthJohri](https://github.com/ParthJohri/ParthJohri)
-3. 🗣 Commented on [#128](https://github.com/newwwie/newwwie.com/pull/128#issuecomment-2258763293) in [newwwie/newwwie.com](https://github.com/newwwie/newwwie.com)
-4. 💪 Opened PR [#128](https://github.com/newwwie/newwwie.com/pull/128) in [newwwie/newwwie.com](https://github.com/newwwie/newwwie.com)
-5. 🗣 Commented on [#126](https://github.com/newwwie/newwwie.com/issues/126#issuecomment-2242632304) in [newwwie/newwwie.com](https://github.com/newwwie/newwwie.com)
 <!--END_SECTION:activity-->
 
 
