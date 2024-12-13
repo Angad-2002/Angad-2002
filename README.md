@@ -111,7 +111,7 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
   - Designed a user-friendly interface using HTML3, CSS, JavaScript, and Bootstrap, and optimized backend systems using Flask and MySQL. Streamlined ETL processes and improved data processing efficiency by 30%. 
   - **Impact:** Achieved 85%+ disease detection accuracy, increased user engagement by 20% through a seamless interface, and enhanced platform versatility for real-world healthcare applications.
 
-  #### <a href="https://github.com/Angad-2002/Sorting_Hat_ML">Sorting Hat</a>
+  #### <a href="https://github.com/Angad-2002/Harry-Potter-Sorting-Hat">Sorting Hat</a>
   <span><img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"> <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"></span>  
   - Built a machine learning model using a Gaussian Classifier to classify individuals into houses from the Harry Potter Universe based on the Big Five Personality Score.  
   - Achieved an **81.34% model accuracy**, showcasing the effectiveness of personality-based predictive analysis.  
