@@ -25,7 +25,7 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
   
 </details>
  <details>
-  <summary><h4> <img align="center" src="[https://github.com/ParthJohri/ParthJohri/blob/readME/icons/experience.gif](https://github.com/ParthJohri/ParthJohri/blob/readME/icons/experience.gif)"  width="29"/> Experience</h2></summary>
+  <summary><h4> <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/experience.gif"  width="29"/> Experience</h2></summary>
 
 - **AI/ML Intern** at SmartInternz (Remote) | Aug 2023 – Nov 2023  
   - Innovated a healthcare data analytics platform by integrating data sources, optimizing backend workflows, and implementing efficient ML algorithms.
