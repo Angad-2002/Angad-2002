@@ -1,4 +1,4 @@
-<h2 align="center">
+![image](https://github.com/user-attachments/assets/a4575c27-a476-4814-9265-5b25cbfdb75b)<h2 align="center">
   <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&size=28&pause=1000&center=true&vCenter=true&width=650&lines=Hi,+Fellow+Earthlings+%F0%9F%91%8B;This+is+Angad+Singh;AI%2FML+%26+Blockchain+Explorer;Coding+the+future,+one+block+at+a+time;Where+data+drives+innovation" alt="Typing SVG"/>
 </h2>
 
@@ -105,9 +105,16 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
 <details>
   <summary><h4> <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/projects.gif"  width="29"/> Projects</h2></summary>
 
+   #### <a href="https://github.com/Angad-2002/ExamSecure">ExamSecure</a>
+  <span><img src="https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54"> <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/OpenCV-%235C3EE8.svg?style=for-the-badge&logo=opencv&logoColor=white"> <img src="https://img.shields.io/badge/Google%20Colab-%23F9A825.svg?style=for-the-badge&logo=googlecolab&logoColor=white"></span>  
+  - Implemented a secure online exam platform with real-time proctoring using FaceDB and OpenCV to detect and flag suspicious activities. 
+  - Built an efficient backend system using Flask and FaceDB, ensuring seamless user authentication and secure data storage. 
+  - **Key Metrics:** Face Recognition Module achieved **~99% TPR**, **0.1%-1% FPR**, **~98%-99% Accuracy**, **~95%-99% Precision**, **~97%-99% F1 Score**, and an AUC of **>0.99**. Default Euclidean threshold set to **0.6** for recognition.
+  - **Impact:** Improved exam integrity by 40% and offered an efficient solution for remote education institutions to conduct exams securely. 
+
   #### <a href="https://github.com/Angad-2002/MindSyncPlus">MindSync+</a>
-  <span><img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"> <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"></span>  
-  - Innovated an end-to-end healthcare platform for detecting Alzheimer's stages from MRI scans, incorporating a login and complaint registration system. Integrated ML models like Custom CNNs, VGG19, and ResNet50 to optimize disease detection.
+  <span><img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"> <img src="https://img.shields.io/badge/bootstrap-%23563D7C.svg?style=for-the-badge&logo=bootstrap&logoColor=white"> <img src="https://img.shields.io/badge/flask-%23000.svg?style=for-the-badge&logo=flask&logoColor=white"> <img src="https://img.shields.io/badge/MySQL-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white"> <img src="https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white"> <img src="https://img.shields.io/badge/Google%20Colab-%23F9A825.svg?style=for-the-badge&logo=googlecolab&logoColor=white"></span>  
+  - Innovated an end-to-end healthcare platform for detecting Alzheimer's stages from MRI scans, incorporating a login and complaint registration system. Integrated ML models like Custom CNNs, VGG16, and ResNet50 to optimize disease detection.
   - Designed a user-friendly interface using HTML3, CSS, JavaScript, and Bootstrap, and optimized backend systems using Flask and MySQL. Streamlined ETL processes and improved data processing efficiency by 30%. 
   - **Impact:** Achieved 85%+ disease detection accuracy, increased user engagement by 20% through a seamless interface, and enhanced platform versatility for real-world healthcare applications.
 
