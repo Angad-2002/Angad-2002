@@ -195,22 +195,6 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
  </a>
 </p>
 
-### ✅ Merged PRs
-<!--Start Count Merged PRs-->
-  <span><img src="https://img.shields.io/badge/Total_Merged_PRs-0-1877F2?style=for-the-badge"></span>
-<!--Finish Count Merged PRs-->
-
-<!--Start Merged PRs-->
-
-<!--Finish Merged PRs-->
-
-### <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/activity.gif"  width="25"/> Recent Activity
-
-<!--START_SECTION:activity-->
-<!--END_SECTION:activity-->
-
-
-
 ## <img align ='center' src='https://media2.giphy.com/media/UQDSBzfyiBKvgFcSTw/giphy.gif?cid=ecf05e47p3cd513axbek3f56ti3jzizq8hincw20jauyyfyw&rid=giphy.gif' width ='37' /> Random Joke 
 
 <details>
