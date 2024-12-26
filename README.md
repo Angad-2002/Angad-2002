@@ -112,7 +112,7 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
   - **Key Metrics:** Face Recognition Module achieved **~99% TPR**, **0.1%-1% FPR**, **~98%-99% Accuracy**, **~95%-99% Precision**, **~97%-99% F1 Score**, and an AUC of **>0.99**. Default Euclidean threshold set to **0.6** for recognition.
   - **Impact:** Improved exam integrity by 40% and offered an efficient solution for remote education institutions to conduct exams securely.
 
-  #### <a href="https://github.com/Angad-2002/MerkleProofVerifier">Merkle Tree Verifier</a>
+  #### <a href="https://github.com/Angad-2002/Merkle-Tree-DApp">Merkle Tree Verifier</a>
  <span><img src="https://img.shields.io/badge/HTML5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white"> <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white"> <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E"> <img src="https://img.shields.io/badge/Solidity-%23363636.svg?style=for-the-badge&logo=solidity&logoColor=white"> <img src="https://img.shields.io/badge/web3.js-F16822?style=for-the-badge&logo=web3.js&logoColor=white"> <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white"></span>  
  - Designed a blockchain-based **Merkle Proof Verifier** smart contract to validate transactions with a cryptographic hashing mechanism, reducing verification time by **30%** compared to naive approaches.  
  - Developed the contract in **Solidity**, tested integration with **Web3.js**, and deployed on a local Ethereum network to handle up to **10,000 transactions** efficiently with minimal gas costs.  
