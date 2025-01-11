@@ -21,7 +21,7 @@ I’m an <strong>AI/ML and Web3 enthusiast</strong> passionate about solving com
   <summary><h4> <img align="center" src="https://github.com/ParthJohri/ParthJohri/blob/readME/icons/academics.gif"  width="29"/> Academics</h2></summary>
 
   <span><img src="https://img.shields.io/badge/BTECH-VIT_CSE'25-1877F2?style=for-the-badge"></span>
-  <span><img src="https://img.shields.io/badge/CGPA (UPTO 6'TH SEMESTER)-8.79/10.0-EFEEE9?style=for-the-badge"></span>
+  <span><img src="https://img.shields.io/badge/CGPA (UPTO 7'TH SEMESTER)-8.77/10.0-EFEEE9?style=for-the-badge"></span>
   
 </details>
  <details>
