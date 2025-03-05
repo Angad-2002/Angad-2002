@@ -1,0 +1,1253 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "cfa41021",
+   "metadata": {
+    "papermill": {
+     "duration": 0.006683,
+     "end_time": "2025-03-05T16:06:17.937771",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:17.931088",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "# **Chronic Kidney Disease (CKD) Analysis with GFR Calculation**"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "05bdf890",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005186,
+     "end_time": "2025-03-05T16:06:17.948533",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:17.943347",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "### **Objective**"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "26e72e9e",
+   "metadata": {
+    "papermill": {
+     "duration": 0.004955,
+     "end_time": "2025-03-05T16:06:17.958698",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:17.953743",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "In this notebook, we analyze the **Chronic Kidney Disease (CKD) dataset** and compute the **Glomerular Filtration Rate (GFR)** using the **CKD-EPI equation**. Based on the calculated GFR, we classify patients into different **CKD stages**."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "283e0da1",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005029,
+     "end_time": "2025-03-05T16:06:17.968930",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:17.963901",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "91f52cd3",
+   "metadata": {
+    "papermill": {
+     "duration": 0.004987,
+     "end_time": "2025-03-05T16:06:17.979003",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:17.974016",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## **1️⃣ Importing Libraries**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "d4a38363",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-03-05T16:06:17.990770Z",
+     "iopub.status.busy": "2025-03-05T16:06:17.990436Z",
+     "iopub.status.idle": "2025-03-05T16:06:20.145716Z",
+     "shell.execute_reply": "2025-03-05T16:06:20.144498Z"
+    },
+    "id": "DtDpsCSVl9eT",
+    "papermill": {
+     "duration": 2.163487,
+     "end_time": "2025-03-05T16:06:20.147689",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:17.984202",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "#Import libraries\n",
+    "import pandas as pd\n",
+    "import numpy as np\n",
+    "from sklearn.preprocessing import LabelEncoder, StandardScaler\n",
+    "from collections import Counter"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "53c502fa",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005215,
+     "end_time": "2025-03-05T16:06:20.158422",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.153207",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "We use:\n",
+    "- `pandas` for data manipulation\n",
+    "- `numpy` for numerical operations"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "01ed0e37",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005063,
+     "end_time": "2025-03-05T16:06:20.168768",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.163705",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "47afd37f",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005294,
+     "end_time": "2025-03-05T16:06:20.179276",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.173982",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## **2️⃣ Loading the Dataset**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 2,
+   "id": "b8261859",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-03-05T16:06:20.191959Z",
+     "iopub.status.busy": "2025-03-05T16:06:20.191420Z",
+     "iopub.status.idle": "2025-03-05T16:06:20.214000Z",
+     "shell.execute_reply": "2025-03-05T16:06:20.213051Z"
+    },
+    "id": "3TwP2nvrmRax",
+    "papermill": {
+     "duration": 0.030688,
+     "end_time": "2025-03-05T16:06:20.215805",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.185117",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Load dataset\n",
+    "df = pd.read_csv(\"/kaggle/input/kidney-dataset/kidney_disease.csv\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "49342951",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005006,
+     "end_time": "2025-03-05T16:06:20.226445",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.221439",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "This dataset contains medical records of patients, including serum creatinine levels (`sc`) and other biomarkers."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2805b259",
+   "metadata": {
+    "papermill": {
+     "duration": 0.004928,
+     "end_time": "2025-03-05T16:06:20.236668",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.231740",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "\n",
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e995dcef",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005023,
+     "end_time": "2025-03-05T16:06:20.246939",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.241916",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## **3️⃣ Understanding the Dataset**"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 3,
+   "id": "88ecd237",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-03-05T16:06:20.259008Z",
+     "iopub.status.busy": "2025-03-05T16:06:20.258646Z",
+     "iopub.status.idle": "2025-03-05T16:06:20.299362Z",
+     "shell.execute_reply": "2025-03-05T16:06:20.298317Z"
+    },
+    "id": "3aM-29pvmZe1",
+    "outputId": "7b1c94ab-52d7-4bd3-e264-d0d8d93b95b8",
+    "papermill": {
+     "duration": 0.048661,
+     "end_time": "2025-03-05T16:06:20.301042",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.252381",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>id</th>\n",
+       "      <th>age</th>\n",
+       "      <th>bp</th>\n",
+       "      <th>sg</th>\n",
+       "      <th>al</th>\n",
+       "      <th>su</th>\n",
+       "      <th>rbc</th>\n",
+       "      <th>pc</th>\n",
+       "      <th>pcc</th>\n",
+       "      <th>ba</th>\n",
+       "      <th>...</th>\n",
+       "      <th>pcv</th>\n",
+       "      <th>wc</th>\n",
+       "      <th>rc</th>\n",
+       "      <th>htn</th>\n",
+       "      <th>dm</th>\n",
+       "      <th>cad</th>\n",
+       "      <th>appet</th>\n",
+       "      <th>pe</th>\n",
+       "      <th>ane</th>\n",
+       "      <th>classification</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>0</td>\n",
+       "      <td>48.0</td>\n",
+       "      <td>80.0</td>\n",
+       "      <td>1.020</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>...</td>\n",
+       "      <td>44</td>\n",
+       "      <td>7800</td>\n",
+       "      <td>5.2</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>no</td>\n",
+       "      <td>good</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>ckd</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>7.0</td>\n",
+       "      <td>50.0</td>\n",
+       "      <td>1.020</td>\n",
+       "      <td>4.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>...</td>\n",
+       "      <td>38</td>\n",
+       "      <td>6000</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>good</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>ckd</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>2</td>\n",
+       "      <td>62.0</td>\n",
+       "      <td>80.0</td>\n",
+       "      <td>1.010</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>3.0</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>...</td>\n",
+       "      <td>31</td>\n",
+       "      <td>7500</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>no</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>no</td>\n",
+       "      <td>poor</td>\n",
+       "      <td>no</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>ckd</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>3</td>\n",
+       "      <td>48.0</td>\n",
+       "      <td>70.0</td>\n",
+       "      <td>1.005</td>\n",
+       "      <td>4.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>abnormal</td>\n",
+       "      <td>present</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>...</td>\n",
+       "      <td>32</td>\n",
+       "      <td>6700</td>\n",
+       "      <td>3.9</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>poor</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>ckd</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>4</td>\n",
+       "      <td>51.0</td>\n",
+       "      <td>80.0</td>\n",
+       "      <td>1.010</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>...</td>\n",
+       "      <td>35</td>\n",
+       "      <td>7300</td>\n",
+       "      <td>4.6</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>good</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>ckd</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>5 rows × 26 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   id   age    bp     sg   al   su     rbc        pc         pcc          ba  \\\n",
+       "0   0  48.0  80.0  1.020  1.0  0.0     NaN    normal  notpresent  notpresent   \n",
+       "1   1   7.0  50.0  1.020  4.0  0.0     NaN    normal  notpresent  notpresent   \n",
+       "2   2  62.0  80.0  1.010  2.0  3.0  normal    normal  notpresent  notpresent   \n",
+       "3   3  48.0  70.0  1.005  4.0  0.0  normal  abnormal     present  notpresent   \n",
+       "4   4  51.0  80.0  1.010  2.0  0.0  normal    normal  notpresent  notpresent   \n",
+       "\n",
+       "   ...  pcv    wc   rc  htn   dm  cad appet   pe  ane classification  \n",
+       "0  ...   44  7800  5.2  yes  yes   no  good   no   no            ckd  \n",
+       "1  ...   38  6000  NaN   no   no   no  good   no   no            ckd  \n",
+       "2  ...   31  7500  NaN   no  yes   no  poor   no  yes            ckd  \n",
+       "3  ...   32  6700  3.9  yes   no   no  poor  yes  yes            ckd  \n",
+       "4  ...   35  7300  4.6   no   no   no  good   no   no            ckd  \n",
+       "\n",
+       "[5 rows x 26 columns]"
+      ]
+     },
+     "execution_count": 3,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "38b03f3e",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005502,
+     "end_time": "2025-03-05T16:06:20.312200",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.306698",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "- `age`: Patient's age\n",
+    "- `sc`: Serum creatinine level\n",
+    "- Other biomarkers (not used for GFR calculation)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e8f175e2",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005617,
+     "end_time": "2025-03-05T16:06:20.323151",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.317534",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "caca32f5",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005094,
+     "end_time": "2025-03-05T16:06:20.333595",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.328501",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## **4️⃣ CKD-EPI Equation for GFR Calculation**\n",
+    "The **CKD-EPI equation** estimates the **Glomerular Filtration Rate (GFR)**, which helps assess kidney function.\n",
+    "\n",
+    "$$\n",
+    "GFR = 141 \\times \\left( \\min\\left(\\frac{SC}{k}, 1\\right) \\right)^{\\alpha} \\times \\left( \\max\\left(\\frac{SC}{k}, 1\\right) \\right)^{-1.209} \\times 0.993^{Age}\n",
+    "$$\n",
+    "\n",
+    "Where:\n",
+    "- k = 0.8\n",
+    "- alpha = -0.37 \n",
+    "- SC = Serum creatinine  \n",
+    "- Age = Patient's age"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "0f16face",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-03-05T16:06:20.345619Z",
+     "iopub.status.busy": "2025-03-05T16:06:20.345084Z",
+     "iopub.status.idle": "2025-03-05T16:06:20.349982Z",
+     "shell.execute_reply": "2025-03-05T16:06:20.349032Z"
+    },
+    "papermill": {
+     "duration": 0.012705,
+     "end_time": "2025-03-05T16:06:20.351566",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.338861",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Function to calculate GFR\n",
+    "def calculate_gfr(age, serum_creatinine):\n",
+    "    k = 0.8\n",
+    "    alpha = -0.37\n",
+    "    gfr = (141 * min(serum_creatinine / k, 1)**alpha *\n",
+    "           max(serum_creatinine / k, 1)**-1.209 *\n",
+    "           0.993**age)\n",
+    "    return gfr"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "587b5718",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005324,
+     "end_time": "2025-03-05T16:06:20.362454",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.357130",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "\n",
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4782be40",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005044,
+     "end_time": "2025-03-05T16:06:20.372834",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.367790",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## **5️⃣ Applying the GFR Function to the Dataset**\n",
+    "We now apply the GFR function to each row in the dataset.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "3a8ed6e3",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-03-05T16:06:20.385044Z",
+     "iopub.status.busy": "2025-03-05T16:06:20.384713Z",
+     "iopub.status.idle": "2025-03-05T16:06:20.395754Z",
+     "shell.execute_reply": "2025-03-05T16:06:20.394792Z"
+    },
+    "papermill": {
+     "duration": 0.019251,
+     "end_time": "2025-03-05T16:06:20.397603",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.378352",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [],
+   "source": [
+    "# Apply GFR calculation\n",
+    "df[\"gfr\"] = df.apply(lambda row: calculate_gfr(row[\"age\"], row[\"sc\"]), axis=1)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9face549",
+   "metadata": {
+    "papermill": {
+     "duration": 0.0052,
+     "end_time": "2025-03-05T16:06:20.408695",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.403495",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e7cb4ea2",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005533,
+     "end_time": "2025-03-05T16:06:20.419715",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.414182",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## **6️⃣ Mapping GFR to CKD Stages**\n",
+    "Based on GFR values, we classify patients into **CKD Stages**:\n",
+    "\n",
+    "| GFR (mL/min/1.73m²) | CKD Stage |\n",
+    "|----------------------|----------|\n",
+    "| ≥ 90                | 0 (Normal) |\n",
+    "| 60 - 89             | 1 (Mild) |\n",
+    "| 45 - 59             | 2 (Mild-Moderate) |\n",
+    "| 30 - 44             | 3 (Moderate-Severe) |\n",
+    "| 15 - 29             | 4 (Severe) |\n",
+    "| < 15                | 5 (Kidney Failure) |"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f23c5a2e",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005123,
+     "end_time": "2025-03-05T16:06:20.430285",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.425162",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "\n",
+    "---"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "910769e5",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-03-05T16:06:20.442383Z",
+     "iopub.status.busy": "2025-03-05T16:06:20.441992Z",
+     "iopub.status.idle": "2025-03-05T16:06:20.457228Z",
+     "shell.execute_reply": "2025-03-05T16:06:20.456243Z"
+    },
+    "id": "YwborO3fmiVf",
+    "outputId": "de430ed7-befe-4f4d-a29e-f7eb0df35836",
+    "papermill": {
+     "duration": 0.023055,
+     "end_time": "2025-03-05T16:06:20.458646",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.435591",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>age</th>\n",
+       "      <th>sc</th>\n",
+       "      <th>gfr</th>\n",
+       "      <th>ckd_stage</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>48.0</td>\n",
+       "      <td>1.2</td>\n",
+       "      <td>61.643701</td>\n",
+       "      <td>1</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>7.0</td>\n",
+       "      <td>0.8</td>\n",
+       "      <td>134.234408</td>\n",
+       "      <td>0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>62.0</td>\n",
+       "      <td>1.8</td>\n",
+       "      <td>34.220303</td>\n",
+       "      <td>3</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>48.0</td>\n",
+       "      <td>3.8</td>\n",
+       "      <td>15.298909</td>\n",
+       "      <td>4</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>51.0</td>\n",
+       "      <td>1.4</td>\n",
+       "      <td>50.095393</td>\n",
+       "      <td>2</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "    age   sc         gfr  ckd_stage\n",
+       "0  48.0  1.2   61.643701          1\n",
+       "1   7.0  0.8  134.234408          0\n",
+       "2  62.0  1.8   34.220303          3\n",
+       "3  48.0  3.8   15.298909          4\n",
+       "4  51.0  1.4   50.095393          2"
+      ]
+     },
+     "execution_count": 6,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "# Map GFR values to CKD Stages\n",
+    "def map_ckd_stage(gfr):\n",
+    "    if gfr >= 90:\n",
+    "        return 0\n",
+    "    elif gfr >= 60:\n",
+    "        return 1\n",
+    "    elif gfr >= 45:\n",
+    "        return 2\n",
+    "    elif gfr >= 30:\n",
+    "        return 3\n",
+    "    elif gfr >= 15:\n",
+    "        return 4\n",
+    "    else:\n",
+    "        return 5\n",
+    "\n",
+    "df[\"ckd_stage\"] = df[\"gfr\"].apply(map_ckd_stage)\n",
+    "df[[\"age\", \"sc\", \"gfr\", \"ckd_stage\"]].head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "b8bd693e",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-03-05T16:06:20.471198Z",
+     "iopub.status.busy": "2025-03-05T16:06:20.470817Z",
+     "iopub.status.idle": "2025-03-05T16:06:20.491561Z",
+     "shell.execute_reply": "2025-03-05T16:06:20.490501Z"
+    },
+    "papermill": {
+     "duration": 0.028927,
+     "end_time": "2025-03-05T16:06:20.493308",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.464381",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "data": {
+      "text/html": [
+       "<div>\n",
+       "<style scoped>\n",
+       "    .dataframe tbody tr th:only-of-type {\n",
+       "        vertical-align: middle;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe tbody tr th {\n",
+       "        vertical-align: top;\n",
+       "    }\n",
+       "\n",
+       "    .dataframe thead th {\n",
+       "        text-align: right;\n",
+       "    }\n",
+       "</style>\n",
+       "<table border=\"1\" class=\"dataframe\">\n",
+       "  <thead>\n",
+       "    <tr style=\"text-align: right;\">\n",
+       "      <th></th>\n",
+       "      <th>id</th>\n",
+       "      <th>age</th>\n",
+       "      <th>bp</th>\n",
+       "      <th>sg</th>\n",
+       "      <th>al</th>\n",
+       "      <th>su</th>\n",
+       "      <th>rbc</th>\n",
+       "      <th>pc</th>\n",
+       "      <th>pcc</th>\n",
+       "      <th>ba</th>\n",
+       "      <th>...</th>\n",
+       "      <th>rc</th>\n",
+       "      <th>htn</th>\n",
+       "      <th>dm</th>\n",
+       "      <th>cad</th>\n",
+       "      <th>appet</th>\n",
+       "      <th>pe</th>\n",
+       "      <th>ane</th>\n",
+       "      <th>classification</th>\n",
+       "      <th>gfr</th>\n",
+       "      <th>ckd_stage</th>\n",
+       "    </tr>\n",
+       "  </thead>\n",
+       "  <tbody>\n",
+       "    <tr>\n",
+       "      <th>0</th>\n",
+       "      <td>0</td>\n",
+       "      <td>48.0</td>\n",
+       "      <td>80.0</td>\n",
+       "      <td>1.020</td>\n",
+       "      <td>1.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>...</td>\n",
+       "      <td>5.2</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>no</td>\n",
+       "      <td>good</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>ckd</td>\n",
+       "      <td>61.643701</td>\n",
+       "      <td>1</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>1</th>\n",
+       "      <td>1</td>\n",
+       "      <td>7.0</td>\n",
+       "      <td>50.0</td>\n",
+       "      <td>1.020</td>\n",
+       "      <td>4.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>...</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>good</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>ckd</td>\n",
+       "      <td>134.234408</td>\n",
+       "      <td>0</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>2</th>\n",
+       "      <td>2</td>\n",
+       "      <td>62.0</td>\n",
+       "      <td>80.0</td>\n",
+       "      <td>1.010</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>3.0</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>...</td>\n",
+       "      <td>NaN</td>\n",
+       "      <td>no</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>no</td>\n",
+       "      <td>poor</td>\n",
+       "      <td>no</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>ckd</td>\n",
+       "      <td>34.220303</td>\n",
+       "      <td>3</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>3</th>\n",
+       "      <td>3</td>\n",
+       "      <td>48.0</td>\n",
+       "      <td>70.0</td>\n",
+       "      <td>1.005</td>\n",
+       "      <td>4.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>abnormal</td>\n",
+       "      <td>present</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>...</td>\n",
+       "      <td>3.9</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>poor</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>yes</td>\n",
+       "      <td>ckd</td>\n",
+       "      <td>15.298909</td>\n",
+       "      <td>4</td>\n",
+       "    </tr>\n",
+       "    <tr>\n",
+       "      <th>4</th>\n",
+       "      <td>4</td>\n",
+       "      <td>51.0</td>\n",
+       "      <td>80.0</td>\n",
+       "      <td>1.010</td>\n",
+       "      <td>2.0</td>\n",
+       "      <td>0.0</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>normal</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>notpresent</td>\n",
+       "      <td>...</td>\n",
+       "      <td>4.6</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>good</td>\n",
+       "      <td>no</td>\n",
+       "      <td>no</td>\n",
+       "      <td>ckd</td>\n",
+       "      <td>50.095393</td>\n",
+       "      <td>2</td>\n",
+       "    </tr>\n",
+       "  </tbody>\n",
+       "</table>\n",
+       "<p>5 rows × 28 columns</p>\n",
+       "</div>"
+      ],
+      "text/plain": [
+       "   id   age    bp     sg   al   su     rbc        pc         pcc          ba  \\\n",
+       "0   0  48.0  80.0  1.020  1.0  0.0     NaN    normal  notpresent  notpresent   \n",
+       "1   1   7.0  50.0  1.020  4.0  0.0     NaN    normal  notpresent  notpresent   \n",
+       "2   2  62.0  80.0  1.010  2.0  3.0  normal    normal  notpresent  notpresent   \n",
+       "3   3  48.0  70.0  1.005  4.0  0.0  normal  abnormal     present  notpresent   \n",
+       "4   4  51.0  80.0  1.010  2.0  0.0  normal    normal  notpresent  notpresent   \n",
+       "\n",
+       "   ...   rc  htn   dm  cad  appet   pe  ane classification         gfr  \\\n",
+       "0  ...  5.2  yes  yes   no   good   no   no            ckd   61.643701   \n",
+       "1  ...  NaN   no   no   no   good   no   no            ckd  134.234408   \n",
+       "2  ...  NaN   no  yes   no   poor   no  yes            ckd   34.220303   \n",
+       "3  ...  3.9  yes   no   no   poor  yes  yes            ckd   15.298909   \n",
+       "4  ...  4.6   no   no   no   good   no   no            ckd   50.095393   \n",
+       "\n",
+       "  ckd_stage  \n",
+       "0         1  \n",
+       "1         0  \n",
+       "2         3  \n",
+       "3         4  \n",
+       "4         2  \n",
+       "\n",
+       "[5 rows x 28 columns]"
+      ]
+     },
+     "execution_count": 7,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "df.head()"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "260660ae",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-03-05T16:06:20.507147Z",
+     "iopub.status.busy": "2025-03-05T16:06:20.506794Z",
+     "iopub.status.idle": "2025-03-05T16:06:20.525342Z",
+     "shell.execute_reply": "2025-03-05T16:06:20.524074Z"
+    },
+    "papermill": {
+     "duration": 0.02801,
+     "end_time": "2025-03-05T16:06:20.527527",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.499517",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Dataset saved as 'ckd_stages_dataset.csv'.\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Save to CSV\n",
+    "df.to_csv(\"ckd_stages_dataset.csv\", index=False)\n",
+    "\n",
+    "print(\"Dataset saved as 'ckd_stages_dataset.csv'.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cfd59c7f",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005855,
+     "end_time": "2025-03-05T16:06:20.540092",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.534237",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "b94a085d",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005751,
+     "end_time": "2025-03-05T16:06:20.551867",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.546116",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## **7️⃣ Saving the Processed Data**\n",
+    "Finally, we save the updated dataset with **GFR and CKD Stage classification**."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "9b5a6452",
+   "metadata": {
+    "execution": {
+     "iopub.execute_input": "2025-03-05T16:06:20.565394Z",
+     "iopub.status.busy": "2025-03-05T16:06:20.564852Z",
+     "iopub.status.idle": "2025-03-05T16:06:20.577192Z",
+     "shell.execute_reply": "2025-03-05T16:06:20.575870Z"
+    },
+    "papermill": {
+     "duration": 0.020879,
+     "end_time": "2025-03-05T16:06:20.578815",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.557936",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Dataset saved to /kaggle/working/ckd_stages_dataset.csv\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Save to the Kaggle output directory\n",
+    "output_path = \"/kaggle/working/ckd_stages_dataset.csv\"\n",
+    "df.to_csv(output_path, index=False)\n",
+    "\n",
+    "print(f\"Dataset saved to {output_path}\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "faf3092a",
+   "metadata": {
+    "papermill": {
+     "duration": 0.006103,
+     "end_time": "2025-03-05T16:06:20.591407",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.585304",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "---"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "4abcd9a7",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005993,
+     "end_time": "2025-03-05T16:06:20.603730",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.597737",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "## **8️⃣ Conclusion**\n",
+    "- We **calculated GFR** using the **CKD-EPI equation**.\n",
+    "- We **classified CKD Stages** based on GFR.\n",
+    "- The processed dataset is **saved for further analysis**."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "e2404e73",
+   "metadata": {
+    "papermill": {
+     "duration": 0.005877,
+     "end_time": "2025-03-05T16:06:20.615950",
+     "exception": false,
+     "start_time": "2025-03-05T16:06:20.610073",
+     "status": "completed"
+    },
+    "tags": []
+   },
+   "source": [
+    "---\n"
+   ]
+  }
+ ],
+ "metadata": {
+  "colab": {
+   "provenance": []
+  },
+  "kaggle": {
+   "accelerator": "none",
+   "dataSources": [
+    {
+     "datasetId": 6797061,
+     "sourceId": 10931301,
+     "sourceType": "datasetVersion"
+    }
+   ],
+   "dockerImageVersionId": 30918,
+   "isGpuEnabled": false,
+   "isInternetEnabled": true,
+   "language": "python",
+   "sourceType": "notebook"
+  },
+  "kernelspec": {
+   "display_name": "Python 3",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.12"
+  },
+  "papermill": {
+   "default_parameters": {},
+   "duration": 6.110807,
+   "end_time": "2025-03-05T16:06:21.242440",
+   "environment_variables": {},
+   "exception": null,
+   "input_path": "__notebook__.ipynb",
+   "output_path": "__notebook__.ipynb",
+   "parameters": {},
+   "start_time": "2025-03-05T16:06:15.131633",
+   "version": "2.6.0"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
